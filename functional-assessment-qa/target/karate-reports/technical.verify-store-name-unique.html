@@ -27,7 +27,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>assessment.test-case-two</title>
+    <title>technical.verify-store-name-unique</title>
   </head>
   <body>
     <div id="root-container">
@@ -50,13 +50,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2023-04-11 03:08:41 pm</div>
+    <div>2023-04-11 03:02:18 pm</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:3]"><span>[1:3]</span> <span>To verify the response if path is removed from URL</span></a>
+            <a href="#[1:10]"><span>[1:10]</span> <span>To verify that the store is correctly inserted</span></a>
           </div>
         </div>
       </div>
@@ -65,48 +65,47 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">assessment/test-case-two.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Get statistics for all countries about COVID-19</span>
+          <span class="feature-path">technical/verify-store-name-unique.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Trigger a Job and validate if the store record is saved</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:3]">
+          <div class="scenario-heading" id="[1:10]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:3]</span>
-                <span class="scenario-name">To verify the response if path is removed from URL</span>
+                Scenario: <span>[1:10]</span>
+                <span class="scenario-name">To verify that the store is correctly inserted</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>85</span>
+              <span>ms:</span>&nbsp;<span>362</span>
             </div>
           </div>
-          
-          <div><div>
+          <div class="step-row">
+            <div class="step-container" id="[1:10]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:10]bg"><div>
+  
+
   
 
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment">#if path is invalid, Error 404 must be shown</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref passed">6</div>
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url baseUrl</span>
+        <span>And</span>&nbsp;<span>def config = { username: &#39;test&#39;, password: &#39;password&#39;, url: &#39;jdbc:h2:file:./testdb&#39;, driverClassName: &#39;org.h2.Driver&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">29</div>
   </div>
 
    
@@ -115,90 +114,111 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6">15:08:41.650 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">15:02:18.414 karate.env system property was: null 
 </div>   
 
   
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[1:10]bg"><div>
+  
+
   
 
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
       
-      <div class="step-cell comment"># And path &#39;statistics&#39;   #path is removed</div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def DbUtils = Java.type(&#39;technical.DbUtils&#39;)</span>
+      </div>
     </div>
-    <div class="time-cell comment"></div>            
+    <div class="time-cell passed">7</div>
   </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def db = new DbUtils(config)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">38</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def EtlJob = Java.type(&#39;technical.EtlJob&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
 
   <div class="step-row">
     <div class="step-container" id="0.8">
-      <div class="step-ref passed">8</div>
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header X-RapidAPI-Key = key</span>
+        <span>And</span>&nbsp;<span>def job = new EtlJob()</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref passed">9</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header X-RapidAPI-Host = host</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref passed">10</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">85</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -223,10 +243,108 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 404</span>
+        <span>*</span>&nbsp;<span>job.triggerJob()</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def stores = db.readRows(&#39;SELECT * FROM PUBLIC.DIM_STORES where store_name=\&#39;Testme Store 1\&#39;&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">267</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print stores</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">15:02:18.802 [print] [
+  {
+    &quot;STORE_ID&quot;: 3,
+    &quot;STORE_CODE&quot;: &quot;IND3&quot;,
+    &quot;STORE_NAME&quot;: &quot;Testme Store 1&quot;,
+    &quot;COUNTRY_CODE&quot;: &quot;IN&quot;,
+    &quot;STREET_NAME&quot;: &quot; Jl Ciledug Raya 88, Dki Jakarta&quot;,
+    &quot;PIN_CODE&quot;: &quot;15156&quot;,
+    &quot;LVL1_GEOG&quot;: &quot;Jakarta&quot;,
+    &quot;LVL2_GOEG&quot;: &quot;Dki Jakarta&quot;,
+    &quot;LVL3_GEOG&quot;: null
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>stores.STORE_CODE === &#39;IND3&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
